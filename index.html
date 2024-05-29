@@ -1,63 +1,3 @@
- <!-- <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulación del Ebrio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.2/math.min.js"></script>
-</head>
-<body>
-  <div class="first-container">
-      <h1>Simulación del Ebrio</h1>
-      <h2>Planteamiento del Problema.</h2>
-      <p>
-          <i>
-            Supongamos que un ebrio está parado en una esquina, cuando decide caminar para que le pase el efecto etílico.
-          Supongamos que existe una probabilidad igual de que se dirija al norte, sur, este u oeste al llegar a cada esquina.
-          Si camina 10 calles, ¿Cuál es la probabilidad de que termine su recorrido a dos calles de donde lo empezó?
-        </i>
-        </p>
-
-        <h2>Método de solución del Problema: Simulación de Monte Carlo.</h2>
-        <p>
-            Para resolver el problema de calcular la probabilidad de que un ebrio termine su recorrido a dos calles de donde lo empezó, se puede utilizar una <b>Simulación de Monte Carlo.</b> Esta técnica es útil para resolver problemas que involucran probabilidades y aleatoriedad, ya que permite modelar y simular situaciones complejas de manera efectiva.
-            <br/>
-            Esta técnica implica generar números aleatorios que representan las direcciones que el ebrio puede tomar en cada esquina, y luego contar cuántas veces el ebrio termina exactamente a dos calles de su punto de inicio.
-            <br/>
-            Realizaremos una simulación de 10000 veces, para saber cuantas de estas 10000 veces el ebrio terminó a dos calles de donde empezó. La probabilidad se calcula dividiendo el número de éxitos (???) entre el número total de simulaciones (10000), cuyo resultado será multiplicando por 100 para obtener un porcentaje.
-        </p>
-        <img src="./assets/ecuacion.jpg">
-        
-    </div>
-
-    <div class="container">
-        <div class="left-pane">
-            <br/>
-            <button id="start-simulation" class="center">Iniciar Simulación</button>
-            
-            <div id="math-explanation">
-            
-            </div>
-            <p class="hidden">Probabilidad de terminar a dos calles: <span id="probability">0%</span></p>
-        </div>
-        <div class="right-pane">
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <div id="grid-container">
-                <svg id="canvas" width="100%" height="100%"></svg>
-                <div id="labels"></div>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -108,7 +48,7 @@
             <br/>
             <br/>
             <div id="grid-container">
-                <svg id="canvas" width="750" height="750"></svg> <!-- Tamaño del canvas ajustado -->
+                <svg id="canvas" width="100%" height="100%"></svg> <!-- Tamaño del canvas ajustado -->
                 <div id="labels"></div>
             </div>
         </div>
