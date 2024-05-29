@@ -5,11 +5,13 @@ function startSimulation() {
     const numSimulations = 10000;
     let successfulEndings = 0;
 
+    document.querySelector('.left-pane').style.backgroundColor = '#f0f0f08a';
+
     for (let i = 0; i < numSimulations; i++) {
         let position = { x: 0, y: 0 };
 
         for (let j = 0; j < numStreets; j++) {
-            const direction = Math.floor(Math.random() * 4);
+            const direction = Math.floor(Math.random() * 4); //!CREAMOS LOS RAMDON DE LOS CRUCES CARDINALES.
             switch (direction) {
                 case 0:
                     position.y += 1; // Norte
@@ -26,14 +28,14 @@ function startSimulation() {
             }
         }
 
-        const distance = Math.abs(position.x) + Math.abs(position.y);
-        if (distance === 2) {
+        const distance = Math.abs(position.x) + Math.abs(position.y); //!CONTAMOS LAS CALLES, PARA SAVER QUE TAN LEJOS ESTAREMOS DE LA ZONA 0
+        if (distance === 2) { //!SI EL NUM DE CALLES ES === 2 DE LA ZONA 0, ES LA COINCIDENCIA A CONTAR
             successfulEndings++;
         }
     }
 
-    const probability = (successfulEndings / numSimulations) * 100;
-    document.getElementById('probability').innerText = probability.toFixed(2) + '%';
+    const probability = (successfulEndings / numSimulations) * 100; //!APLICAMOS ECUACION DE PROBABILIDAD
+    document.getElementById('probability').innerText = probability.toFixed(2) + '%'; //!MOSTRAMOS CON SOLO 2 DECIMALES
 
     // Explicación del cálculo matemático
     const mathExplanation = `
